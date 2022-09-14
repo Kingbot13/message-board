@@ -6,15 +6,15 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <div>
+    <a href="/new">Create Message</a>
+    <div class="messages-container">
       <% messages.forEach(item => { %>
-          <div>
-            <div>
-              <p><%= item.user %></p>
-              <p><%= item.added %></p>
+          <div class="message-card">
+            <div class="card-top">
+              <p class="name"><%= item.user %></p>
+              <p class="date"><%= item.added %></p>
             </div>
-            <div>
+            <div class="card-bottom">
               <p><%= item.text %></p>
             </div>
           </div>
